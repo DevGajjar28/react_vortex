@@ -1,6 +1,9 @@
 /* Navbar.css */
 
  
+/* Navbar.css */
+
+ 
 .navbar {
     position: fixed;
     top: 0;
@@ -8,18 +11,268 @@
     width: 100%;
     background-color: rgba(255, 255, 255, 0.92);
     padding: 0.5rem 0;
-
     z-index: 1000;
     border: 2px solid black;
     text-align: center;
 
 
   }
-  .clearfix::after {
+  /* .clearfix::after {
     content: "";
     display: table;
     clear: both;
+} */
+.container {
+    display: flex;
+  }
+  
+  .logo {
+    float: left;
+    padding: 0.25rem;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    line-height: inherit;
+    font-weight: 500;
+    color: black;
+    margin-top: 1rem;
+  }
+  
+  .links {
+    display: flex;
+    align-items: center;
+    float: right;
+    font-size: 1.25rem;
+    padding: 0px 20px 20px 20px;
+    line-height: 50px;
+
+    
+  }
+  
+  .links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+    /* margin: 1rem; */
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+
+
+
+  .links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .links a:hover::after {
+    width: 100%;
+  }
+
+  .content {
+    margin-top: 10px; /* Adjust this value based on your navbar height */
+  }
+
+  
+
+/*  */
+.hamburger-icon {
+    display: none; /* Initially hide the hamburger icon for larger screens */
+    cursor: pointer;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  
+  .hamburger-icon img {
+    width: 30px; /* Adjust the size of the hamburger icon */
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 768px) {
+    .links {
+      display: none;
+      margin-top: 10%;
+      /* padding: 0.5rem; */
+      opacity: 1;
+      font-size: 20px;
+     
+    }
+  
+    .navbar.responsive .links {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+     
+    }
+  
+    .navbar.responsive .links a {
+      margin: 5px 0;
+      white-space: nowrap;
+      transition: color 0.3s ease-in-out;
+    }
+
+   
+    .navbar.responsive .links a:hover {
+        color: grey; /* Change color on hover */
+        list-style: none;
+      }
+   
+  
+    .hamburger-icon {
+      display: block; /* Show the hamburger icon for smaller screens */
+      float: right;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .navbar.responsive .hamburger-icon {
+      float: right;
+      transform: rotate(90deg);
+    }
+    
+      .navbar.responsive {
+        height: auto;
+        transition: height 0.3s ease-in-out;
+      }
+  }
+
+
+  /*  */
+  
+  /* Sub bar css*/
+  .more-link {
+    position: relative;
+ }
+
+.sub-bar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 2px solid rgb(163, 159, 159);
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    box-sizing: content-box;
+    opacity: 0;
+    /* pointer-events: none; */
+    transition: opacity 0.2s ease-in-out, transform 0s linear 0.5s;
+    
 }
+
+
+
+.more-link:hover .sub-bar,
+.sub-bar:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: auto;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    transform: translateY(0);
+}
+
+
+
+.sub-bar a {
+    padding: 2px 0;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease-in-out;
+    opacity: 0;
+    width: 120%;
+  
+    
+}
+
+.sub-section {
+  
+  padding: 10px;
+  width: 100%;
+  box-sizing: content-box;
+  min-height: 60px;
+  overflow: hidden;
+}
+
+.sub-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.sub-bar .sections {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  text-align: left;
+  font-size: 20px;
+
+}
+.sub-bar a:hover::after {
+  width: 0;
+}
+
+
+.sub-bar a:nth-child(1) { animation: fadeIn 0.5s ease-in-out 0.1s forwards; }
+.sub-bar a:nth-child(2) { animation: fadeIn 0.5s ease-in-out 0.2s forwards; }
+.sub-bar a:nth-child(3) { animation: fadeIn 0.5s ease-in-out 0.3s forwards; }
+.sub-bar a:nth-child(4) { animation: fadeIn 0.5s ease-in-out 0.4s forwards; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.sub-bar a:hover {
+    color: grey;
+}
+
+.sub-section {
+    padding: 10px;
+    width: 100%;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+User
+/* Navbar.css */
+
+ 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 0.5rem 0;
+    z-index: 1000;
+    border: 2px solid black;
+    text-align: center;
+
+
+  }
+  /* .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+} */
 .container {
     display: flex;
   }
@@ -82,7 +335,175 @@
   }
 
 
- 
+
+  
+
+/*  */
+.hamburger-icon {
+    display: none; /* Initially hide the hamburger icon for larger screens */
+    cursor: pointer;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  
+  .hamburger-icon img {
+    width: 30px; /* Adjust the size of the hamburger icon */
+  }
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Adjust the spacing as needed */
+  }
+  
+  .social-links a {
+    text-decoration: none;
+  }
+  
+  .social-links img {
+    width: 30px; /* Adjust the size of the social media logos */
+    height: auto;
+    margin-right: 10px; /* Adjust the spacing between logos */
+  }
+
+
+  /* Responsive Styles */
+  @media only screen and (max-width: 768px) {
+    .links {
+      display: none;
+      margin-top: 10%;
+      /* padding: 0.5rem; */
+      opacity: 1;
+      font-size: 20px;
+     
+    }
+  
+    .navbar.responsive .links {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+     
+    }
+  
+    .navbar.responsive .links a {
+      margin: 5px 0;
+      white-space: nowrap;
+      transition: color 0.3s ease-in-out;
+    }
+
+   
+    .navbar.responsive .links a:hover {
+        color: grey; /* Change color on hover */
+        list-style: none;
+      }
+   
+  
+    .hamburger-icon {
+      display: block; /* Show the hamburger icon for smaller screens */
+      float: right;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .navbar.responsive .hamburger-icon {
+      float: right;
+      transform: rotate(90deg);
+    }
+    
+      .navbar.responsive {
+        height: auto;
+        transition: height 0.3s ease-in-out;
+      }
+  }
+
+
+  /*  */
+  
+  /* Sub bar css*/
+  .more-link {
+    position: relative;
+ }
+
+.sub-bar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 2px solid rgb(163, 159, 159);
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    box-sizing: content-box;
+    opacity: 0;
+    /* pointer-events: none; */
+    transition: opacity 0.2s ease-in-out, transform 0s linear 0.5s;
+    
+}
+
+.more-link:hover .sub-bar,
+.sub-bar:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: auto;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    transform: translateY(0);
+    height: 340px;
+}
+
+.sub-bar a {
+    padding: 8px 0;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease-in-out;
+    opacity: 0;
+    
+}
+
+.sub-bar a:nth-child(1) { animation: fadeIn 0.5s ease-in-out 0.1s forwards; }
+.sub-bar a:nth-child(2) { animation: fadeIn 0.5s ease-in-out 0.2s forwards; }
+.sub-bar a:nth-child(3) { animation: fadeIn 0.5s ease-in-out 0.3s forwards; }
+.sub-bar a:nth-child(4) { animation: fadeIn 0.5s ease-in-out 0.4s forwards; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.sub-bar a:hover {
+    color: grey;
+}
+
+.sub-section {
+    padding: 10px;
+    width: 100%;
+    box-sizing: content-box;
+    min-height: 80px;
+    overflow: hidden;
+}
+
+.sub-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sub-bar .sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+
+}
+.sub-bar a:hover::after {
+    width: 0;
+  }
+
+
+
 
  
   /* Resgister form css */
@@ -326,8 +747,5 @@ p {
     color: grey;
 }
 
-@media(max-width: 720px) {
-    .form-container {
-        width: 80%;
-    }
-}
+/*  */
+
