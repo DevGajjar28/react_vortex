@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import hambar from '../assets/burger.svg';
 import facebook from '../assets/facebook.svg';
 import instagram from '../assets/instagram.svg';
 import twitter from '../assets/twitter.svg';
-
+// import './Navbar.css';
 
 function Navbar() {
-  const location = useLocation();
+  
 
   
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -17,10 +17,8 @@ function Navbar() {
     setMenuOpen(!isMenuOpen);
   };
 
-  // Conditionally render the Navbar based on the current route
-  if (location.pathname === "/Register" || location.pathname === "/Register") {
-    return null;
-  }
+
+
   return (
     <>
       <div className={`navbar ${isMenuOpen ? 'responsive' : ''}`}>

@@ -1,8 +1,11 @@
-import React from 'react'
-
+import React from 'react';
+import './Home.css';
 function Home() {
   return (
-    <div>Home page</div>
+    <div className='mainpage'>
+      Home page
+      <div>hello grienfd 
+        </div></div>
   )
 }
 

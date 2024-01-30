@@ -2,9 +2,9 @@ import React from "react";
 
 function Inspiration(){
     return(        
-        <>
-            <h1>Inspiratiopj page</h1>   
-        </>
+        <div>
+            <h1>Inspiratiopn page</h1>   
+        </div>
     )
 }
 
