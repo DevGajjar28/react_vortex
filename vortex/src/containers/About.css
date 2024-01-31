@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.Main-Div {
+  
+  background-color: #000;
+  height: 200vh;
+  font-family: 'Muli', sans-serif;
+  overflow:hidden ;
+  
+}
+
+
+.text {
+    position:absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    list-style: none;
+    border-bottom: 0;
+  }
+  
+  .text.hidden {
+    border-bottom: 1px solid #fff;
+  }
+  
+  .text li {
+    display: inline-block;
+    float: left;
+    font-weight: 700;
+    font-size: 2em;
+    color: #fff;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    max-width: 2em;
+  }
+  .text.hidden li.spaced {
+    padding-left: 0;
+  }
+  .text li.spaced {
+    padding-left: 0.5em;
+  }
+  
+  .text.hidden li.ghost {
+    opacity: 0;
+    max-width: 0;
+  }
+  
+ 
+  .second-header{
+    border: 2px solid rgb(48, 47, 47);
+    margin: 80px 85px 0px 85px;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    transform: translateX(-1000px);
+
+    
+  }
+  .second-header.visible {
+    opacity: 1;
+    transform: translateX(0); /* Move in from the left */
+  }
+  
+  .story{
+    font-size: 24px;
+    padding: 5%;
+    /* transition: all 0.5s ease-in-out; */
+  }
+  .sub-story{
+   font-size: 20px;
+   line-height: 1.4;
+   letter-spacing: 0.4px;
+   text-align: justify;
+   font-weight:500;
+
+  }
+
+  .photos-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    margin-top: 10%;
+    border: 2px solid black;
+  }
+  
+  .photos-container > div {
+    flex: 1; /* Equal width for each box */
+    height: 350px; /* Adjust the height as needed */
+    box-sizing: border-box; /* Include padding and border in the box size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .photos-container > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Fit the entire image within the box */
+    object-position: center center; /* Center the image within the box */
+  }

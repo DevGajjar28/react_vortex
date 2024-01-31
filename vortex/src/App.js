@@ -11,6 +11,7 @@ import Inspiration from "./containers/Inspiration";
 import Login from "./containers/Login";
 import Premium from "./containers/Premium";
 import Register from "./containers/Register";
+import About from "./containers/About";
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/Premium" element={<Layout><Premium /></Layout>} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register/>} />
+        <Route path="/About" element={<About/>} />
       </Routes>
 
     </>
