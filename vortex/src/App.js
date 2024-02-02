@@ -12,6 +12,7 @@ import Login from "./containers/Login";
 import Premium from "./containers/Premium";
 import Register from "./containers/Register";
 import About from "./containers/About";
+import Contactus from "./containers/Contactus";
 
 function App() {
 
@@ -36,6 +37,8 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register/>} />
         <Route path="/About" element={<About/>} />
+        <Route path="/Contactus" element={<Contactus />} />
+        
       </Routes>
 
     </>

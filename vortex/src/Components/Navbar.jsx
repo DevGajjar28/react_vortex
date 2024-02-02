@@ -35,16 +35,17 @@ function Navbar() {
           <Link to="/advertise">Advertise</Link>
           <Link to="/premium">Premium</Link>
           <Link to="/login">Login</Link>
+         
 
           <div className="more-link">
-            <Link to="/More">More</Link>
+            <div className="More">More</div>
             <div className="sub-bar">
               <div className="sections">
                 <div className="sub-section">
                   <div className="sub-header">Company</div>
                   <Link to="/about">About us</Link>
                   <Link to="/history">History</Link>
-                  <Link to="/contact">Contact us</Link>
+                  <Link to="/Contactus">Contact us</Link>
                 </div>
                 <div className="sub-section">
                   <div className="sub-header">Contributor</div>
