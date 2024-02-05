@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Contactus.css'
+import { Link } from "react-router-dom";
+import facebook from '../assets/facebook.svg';
+import instagram from '../assets/instagram.svg';
+import twitter from '../assets/twitter.svg';
+import email from '../assets/email.svg';
 
 import bgcontact from '../assets/bg-contact.png'
 
@@ -54,22 +59,19 @@ function Contactus() {
     
          <>
    <div className="c-main">
-        <div className="top-container"></div>
+        <div className="top-container"><div className='c-logo'>Vortex</div></div>
+
         <div className="middle-container">
           <div>
             <img src={bgcontact} alt="" />
             <div className="text-overlay">
-              <h2>Contact Us</h2>
-              <p>Your contact text goes here.</p>
+              <h2 className='cu'>Contact Us</h2>
+              <p></p>
             </div>
           </div>
-          <div className="text-container">
-            <div className="contact-text">
-              {/* Additional text content */}
-            </div>
-          </div>
+
           <div className="custom-form-container">
-            <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
               <h2>What can we Do ?</h2>
               <div className="custom-form-field">
                 <label>Name</label>
@@ -94,13 +96,13 @@ function Contactus() {
               </div>
               <p>{formErrors.email}</p>
               <div className="custom-form-field">
-              <label>Reason</label>
+              <label>Details</label>
               <textarea
                 type="text"
                 name="details"
                 placeholder="Details"
-                value={formvalues.details}
-                onChange={handleChange}
+                // value={formvalues.details}
+                // onChange={handleChange}
               />
               </div>
               <button className="custom-form-submit" type="submit">
@@ -122,8 +124,21 @@ function Contactus() {
 
 
     </div>
+    <div className="social-links-contact">
+                <Link to="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                  <img src={facebook} alt="facebook" />
+                </Link>
+                <Link to="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                  <img src={twitter}alt="twitter" />
+                </Link>
+                <Link to="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                  <img src={instagram} alt="instgram" />
+                </Link>
+                <Link to="" target="_blank" rel="noopener noreferrer">
+                  <img src={email} alt="email" />
+                </Link>
 </div>
-
+</div>
 
     
     </>
