@@ -1,0 +1,183 @@
+.A-main{
+    margin-top: 15%;
+}
+.Ad-container{
+    border: 2px solid black;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+}
+
+.ad-words{
+    border: 2px solid red;
+    /* height: 100vh; */
+    flex: 4;
+    /* text-align: center; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 34px;
+    align-items: center;  
+}
+
+.no {
+  margin-bottom: 5%;
+}
+
+.ad-image{
+    border: 2px solid green;
+    height: 100vh;
+    flex: 6;
+    display: flex;
+    
+
+}
+    
+
+
+.photo1{
+    width: 50%;
+    height: 50%;
+    border-radius: 2%;
+    margin-top: 18%;
+    margin-left: 25%;
+    transition: transform 0.3s, filter 0.3s;
+
+    filter: blur(0.8px);
+    
+}
+
+.photo2{
+    width: 30%;
+    height: 40%;
+    border-radius: 2%;
+    /* margin-top: 10%; */
+    margin-right: 20%;
+    transform: translate(-20%, -10%);
+    transition: transform 0.3s, filter 0.3s;
+    filter: blur(0.8px);
+
+}
+.photo3{
+    width: 30%;
+    height: 40%;
+    border-radius: 2%;
+    margin-top: 50%;
+    margin-left: -55%;
+    transform: translate(-20%, -10%);
+    transition: transform 0.3s, filter 0.3s;
+    filter: blur(0.8px);
+
+}
+
+.photo4{
+    width: 20%;
+    height: 30%;
+    border-radius: 2%;
+    margin-top: 30%;
+   margin-left: -20%;
+    transform: translate(-10%, -10%);
+    filter: blur(0.8px);
+
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.photo5{
+    width: 30%;
+    height: 40%;
+    border-radius: 2%;
+    margin-top: 10%;
+    margin-left: -80%;
+    transform: translate(-20%, -10%);
+    transition: transform 0.3s, filter 0.3s;
+    filter: blur(0.8px);
+
+}
+.photo6{
+    width: 30%;
+    height: 40%;
+    border-radius: 2%;
+    margin-top: 50%;
+    margin-left: -25%;
+    transform: translate(-20%, -10%);
+    transition: transform 0.3s, filter 0.3s;
+    filter: blur(0.8px);
+
+}
+
+
+
+.photo1:hover,
+.photo2:hover,
+.photo3:hover,
+.photo4:hover,
+.photo5:hover,
+.photo6:hover {
+    /* transform: scale(1.2); */
+    filter: brightness(1.1);
+}
+
+.cta {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 5%;
+    /* float: left; */
+    padding: 16px 20px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: black;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: grey;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: black;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+  
+  
+/* kjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
+
