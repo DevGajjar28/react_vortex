@@ -14,8 +14,8 @@ h3{
     /* height: 300vh; */
 }
 
-h2{
-    float: left;
+.p-main > h2{
+    /* float: left; */
     margin-top: 5%;
     width: 35%;
     margin-left: 5%;
@@ -33,6 +33,7 @@ h2{
     background-color: rgba(0, 0, 0, 1);
     padding: 1.5rem;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    margin-top: -14%;
   }
   
   .price {
@@ -248,3 +249,5 @@ h2{
     margin-bottom: 10px;
   }
 }
+
+

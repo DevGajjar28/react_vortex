@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-
+import regbg from '../assets/regbg2.jpg'
 
 function Register() {
   const initialvalues = { username: "", email: "", password: "" };
@@ -47,11 +47,14 @@ function Register() {
 
   return (
     <>
+    
+   
       <div className="welcome-details">
         Welcome
         <p className="details">Please enter your details</p>
       </div>
-
+      <div className="register-background">
+      {/* <img src={regbg} alt="bg" /> */}
       <div className={`reg-form-container ${hasErrors ? 'has-errors' : ''}`}>
         {hasErrors ? (
           <div className="message">Signed in successfully</div>
@@ -60,7 +63,7 @@ function Register() {
         )}
 
         <form onSubmit={handleSubmit} className={hasErrors ? 'has-errors' : ''}>
-          <h2>Register</h2>
+          <h2 className="rr">Register</h2>
           <div className="field">
             <label>Username</label>
             <input
@@ -101,6 +104,7 @@ function Register() {
 
       <div className="login-account">
         Already have an account? <Link to="/Login" className='login-link'>Login</Link>
+      </div>
       </div>
     </>
   );

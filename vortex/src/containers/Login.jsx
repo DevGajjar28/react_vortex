@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-
+import loginbg from '../assets/login-bg.jpg';
 
 
 function Login() {
@@ -53,6 +53,8 @@ function Login() {
 
   return (
     <>
+    <div className="background-container">
+      <img src={loginbg} alt="login-background"/>
       <div className="form-container">
     {Object.keys(formErrors).length === 0 && isSubmit  ? 
     (<div className="message">Signed in successfully</div> )
@@ -114,7 +116,7 @@ function Login() {
           {/* </div> */}
         </form>
       </div>
-      
+      </div>
     </>
   );
 }

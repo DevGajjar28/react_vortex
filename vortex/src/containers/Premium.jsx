@@ -80,66 +80,34 @@ function Premium() {
     </div>
     <hr/>
 
-    <div className='faq-vortex'>
-        <div className='headig-of-faq' >
-          FAQ
+    <section className="px-2">
+      <div className="mx-auto max-w-7xl py-10">
+        <div>
+          <div className="max-w-2xl">
+            <h1 className="text-2xl font-bold text-black">Frequently Asked Questions</h1>
+            <p className="mt-4 text-sm leading-6 tracking-wide text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </p>
+          </div>
+          <div className="mt-6 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            {Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className="rounded-md border border-black/30 p-6">
+                <dt className="text-lg font-semibold leading-6 text-gray-900">
+                  How do I get started?
+                </dt>
+                <dd className="mt-2 text-sm text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, et? Obcaecati, nemo
+                  sit. Delectus, totam obcaecati aliquid omnis cumque ex.
+                </dd>
+              </div>
+            ))}
+          </div>
         </div>
-
-        <div className='first-que' onClick={toggleFaq}>what is vortex ?</div>
-        {faqVisible && (
-          <div className={`faq-answer ${faqVisible ? 'visible' : ''}`}>
-            <span>Vortex revolutionizes content aggregation, offering a centralized platform using APIs for seamless access to 
-diverse data sources. It provides a user-friendly interface with advanced features like keyword management, 
-content moderation, and versatile search options, simplifying the process of discovering and utilizing high-quality 
-images. Through API integration, Vortex ensures a rich image pool, catering to students, designers, businesses, 
-and content creators.</span>
-            
-          </div>
-        )}
-
       </div>
-      <div className='second-que' onClick={toggleFaq2}>How do I sign up for a vortex subscription?</div>
-        {faq2Visible && (
-          <div className={`faq-answer ${faq2Visible ? 'visible' : ''}`}>
-            <span>To upgrade to Premium, simply click on the "Get started" button on our Premium page. Follow the prompts to complete the subscription process and unlock exclusive features.</span>     
-          </div>
-        )}
+    </section>
 
-<div className='third-que' onClick={toggleFaq3}>What does "Ad-Free" mean in the Premium subscription?</div>
-        {faq3Visible && (
-          <div className={`faq-answer ${faq3Visible ? 'visible' : ''}`}>
-            <span>With Premium, you won't encounter any advertisements while using our platform, ensuring a more immersive and enjoyable user experience.</span>
-            
-          </div>
-        )}
 
-<div className='fourth-que' onClick={toggleFaq4}>Are there any limitations on downloading photos with the Premium subscription?</div>
-        {faq4Visible && (
-          <div className={`faq-answer ${faq4Visible ? 'visible' : ''}`}>
-            <span>Premium subscribers can enjoy unlimited photo downloads, allowing you to access and use a vast library of high-quality images without any restrictions.</span>
-            
-          </div>
-        )}
-
-<div className='fifth-que' onClick={toggleFaq5}>Is customer support available for Premium subscribers?</div>
-        {faq5Visible && (
-          <div className={`faq-answer ${faq5Visible ? 'visible' : ''}`}>
-            <span>Yes, Premium subscribers benefit from 24/7 customer support. Our dedicated support team is ready to assist you with any queries or issues you may encounter.</span>
-            
-          </div>
-        )}
-
-<hr className="horizontal"/>
-
-<div className="user-policy-links">
-  <div className="privacy-link">
-  <Link to="/" className="pl">Privacy Policy</Link>
-  </div>
-  <div className="Terms-link">
-  <Link to="/" className="pl">Terms</Link>
-  </div>
-  
-</div>
     </div>
     </>
     

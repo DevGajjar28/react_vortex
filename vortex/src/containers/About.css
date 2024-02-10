@@ -57,9 +57,12 @@
     overflow: hidden;
     text-align: center;
     opacity: 1;
-    transition: all 1s ease-in-out;
-    transform: translateX(-1000px);
-
+    /* transition: all 1s ease-in-out;
+    transform: translateX(-1000px); */
+    text-align: justify;
+    text-justify: inter-word;
+    transition: all 2s ease-in-out;
+    transform: translateX(-100%);
     
   }
   .second-header.visible {
@@ -68,8 +71,8 @@
   }
   
   .story{
-    font-size: 24px;
-    padding: 5%;
+    font-size: 38px;
+    padding: 3%;
     /* transition: all 0.5s ease-in-out; */
   }
   .sub-story{
@@ -81,102 +84,12 @@
 
   }
 
-  .photos-container {
-    display: flex;
-    justify-content: space-between; /* Adjust as needed */
-    margin-top: 10%;
-    
-  }
-  
-  .photos-container > div {
-    flex: 1; /* Equal width for each box */
-    height: 350px; /* Adjust the height as needed */
-    box-sizing: border-box; /* Include padding and border in the box size */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out;
-  }
-  .photos-container > div:hover {
-    transform: scale(1.1); /* Increase scale on hover */
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
-  }
-
-  .photo{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .photos-container > div:hover .photo {
-    opacity: 0.8; /* Reduce opacity on hover */
-  }
-
-  .photos-container > div > img {
-    width: 95%;
-    height: 100%;
-    object-fit: cover; /* Fit the entire image within the box */
-   
-  }
-
-  .third-header{
-    margin-top: 15%;
-    overflow: hidden;
-    border: 2px solid black;
-    display: flex;
-    height: 160vh;
-object-fit: contain;
-
-  }
-
-  .third-header > div{
-    flex: 1; /* Equal width for each box */
-
-  }
-
-  .mission{
-    border: 2px solid black;
-    font-size: 24px;
-    padding: 1%;
-    height: 200px;
-    margin-top: 33%;
-    
-    
-    
-  }
-
-  .cross-box{
-    display: flex;
-    border: 2px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* gap: 1px;  */
-  }
-
-  .box1{
-    width: calc(30% - 5px); /* Set the width of each box and consider the gap */
-    height: 300px; /* Set the height of each box */
-    background-color: aqua;
-    box-sizing: border-box;
-    border: 2px solid black;
-clip-path: polygon(0 0, -9000% 5000%, 600% 100%);
-  }
-
-  
-
-.fourth-header{
-  margin-top: 15%;
-  border: 2px solid black;
+  .second-header .story,
+.second-header .sub-story {
+  transform: translateX(100%); /* Initial position outside the viewport on the right */
+  transition: transform 1s ease-in-out;
 }
-
-.touch{
-  border: 2px solid black;
-  height: 100px;
-  width: 50%;
-  
-}
+  .second-header.visible .story,
+  .second-header.visible .sub-story {
+    transform: translateX(0); /* Move in from the right */
+  }
