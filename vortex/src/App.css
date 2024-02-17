@@ -801,7 +801,7 @@ p {
 
 
 /* search */
-.search {
+/* .search {
   display: inline-block;
   position: relative;
  margin-left: 40%;
@@ -835,22 +835,25 @@ p {
   background-color: blue;
 }
 
-/* box */
+box
 
 .i-box{
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
+ 
 
 }
 
 h1 {
-  flex: 0 0 calc(33.33% - 10px); /* Set width for three boxes in a row and consider margin */
-  height: 300px; /* Set your desired height */
-  background-color: #3498db; /* Set your desired background color */
-  margin: 5px; /* Set your desired margin */
-}
+  flex: 0 0 calc(33.33% - 10px); 
+  height: 300px; 
+  background-color: #3498db; 
+  margin: 5px; 
+} */
 
-.s-bar{
+/* .s-container{
   margin-top: 10%;
-}
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+} */

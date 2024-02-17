@@ -16,19 +16,12 @@ import Register from "./containers/Register";
 import About from "./containers/About";
 import Contactus from "./containers/Contactus";
 // import useAxios from "./hooks/useAxios";
-import SearchBar from "./Components/SearchBar";
-import ImageList from "./Components/ImageList";
-import { fetchImages } from "./containers/Images";
+
 
 export const ImageContext = createContext();
 
 function App() {
-  const [images, setImages] = useState([]);
-
-  const handleSearch = async (searchTerm) => {
-    const results = await fetchImages(searchTerm);
-    setImages(results);
-  };
+  
 
   function Layout({ children }) {
     return (
@@ -42,8 +35,7 @@ function App() {
   }
   return (
     <>
-    <SearchBar onSearch={handleSearch} />
-      <ImageList images={images} />
+    
 
       <Routes>
         
