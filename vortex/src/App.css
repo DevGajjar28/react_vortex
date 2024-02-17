@@ -798,3 +798,59 @@ p {
   border-radius: 10px;
   color: black;
 }
+
+
+/* search */
+.search {
+  display: inline-block;
+  position: relative;
+ margin-left: 40%;
+}
+
+.search input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search button[type="submit"] {
+  background-color: #4e99e9;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: .9s ease;
+}
+
+.search button[type="submit"]:hover {
+  transform: scale(1.1);
+  color: rgb(255, 255, 255);
+  background-color: blue;
+}
+
+/* box */
+
+.i-box{
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+
+}
+
+h1 {
+  flex: 0 0 calc(33.33% - 10px); /* Set width for three boxes in a row and consider margin */
+  height: 300px; /* Set your desired height */
+  background-color: #3498db; /* Set your desired background color */
+  margin: 5px; /* Set your desired margin */
+}
+
+.s-bar{
+  margin-top: 10%;
+}
