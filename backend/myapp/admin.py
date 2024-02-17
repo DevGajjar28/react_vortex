@@ -1,9 +1,14 @@
 from django.contrib import admin
-from .models import Student
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import User
 
-# Register your models here.
+# Define a custom admin class inheriting from UserAdmin
+class CustomUserAdmin(UserAdmin):
+    # Add additional fields to display in the admin panel
+    list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff', 'date_joined')
 
-@admin.register(Student)
+# Unregister the default UserAdmin class
+admin.site.unregister(User)
 
-class StudentAdmin(admin.ModelAdmin):
-    list_display = ['id','stuname','email']
+# Register the User model with your custom UserAdmin class
+admin.site.register(User, CustomUserAdmin)
