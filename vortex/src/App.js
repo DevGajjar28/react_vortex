@@ -3,18 +3,18 @@
 // import RegisterForm from './Components/RegisterForm';
 import React, { createContext } from "react";
 import { Route, Routes } from 'react-router-dom';
-import { useEffect, useState } from "react"
 
 import './App.css';
 import Navbar from "./Components/Navbar";
+import About from "./containers/About";
 import Advertise from "./containers/Advertise";
+import Contactus from "./containers/Contactus";
 import Home from "./containers/Home";
 import Inspiration from "./containers/Inspiration";
 import Login from "./containers/Login";
 import Premium from "./containers/Premium";
 import Register from "./containers/Register";
-import About from "./containers/About";
-import Contactus from "./containers/Contactus";
+import History from "./containers/SubPage/History";
 // import useAxios from "./hooks/useAxios";
 
 
@@ -48,6 +48,7 @@ function App() {
         <Route path="/Register" element={<Register/>} />
         <Route path="/About" element={<About/>} />
         <Route path="/Contactus" element={<Contactus />} />
+        <Route path="/History" element={<History/>} />
         
       </Routes>
 

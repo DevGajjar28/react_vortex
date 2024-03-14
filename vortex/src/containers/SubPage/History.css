@@ -1,0 +1,452 @@
+/* ... existing code ... */
+
+.h-head {
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid black;
+  }
+  
+  .hello-u {
+    font-size: 24px;
+  }
+  
+  .head-image {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+  }
+  
+  .center-section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border: 2px solid red;
+  }
+  
+  .sec1,
+  .sec2,
+  .sec3 {
+    width: 100%;
+  }
+  
+  .sec1,
+  .sec2 {
+    border: 2px solid blue;
+    padding: 1rem;
+  }
+  
+  .he1 {
+    font-size: 28px;
+    font-weight: 500;
+    transition: color 0.3s ease, filter 0.3s ease;
+  }
+  
+  .he1{
+    font-size: 28px;
+    font-weight: 500;
+    transition: color 0.3s ease, filter 0.3s ease;
+}
+.he1:hover{
+    cursor: pointer;
+    color: #aaabae ;/* Change this to your desired hover color */
+    filter:blur(0.3px);
+    
+}
+
+.he2{
+    font-size: 18px;
+    margin-top: 20%;  
+    /* padding: 5%; */
+    color:#4f4d4d;
+    transition: color 0.3s ease, filter 0.3s ease;
+    
+}
+.he2:hover{
+    cursor: pointer;
+    color: #007bff;
+}
+
+.he3{
+    font-size: 18px;
+    margin-top: 5%;
+    color: #878787;
+    font-family: "helveticaneuemedium";
+}
+
+.he4{
+    font-size: 18px;
+    margin-top: 25%;  
+    color: #4f4d4d;
+    transition: color 0.3s ease, filter 0.3s ease;
+
+}
+
+.he4:hover{
+    cursor: pointer;
+    color: #007bff;
+}
+.he5{
+    font-size: 18px;
+    margin-top: 5%;
+    color: #878787;
+    font-family: "helveticaneuemedium";
+}
+  
+  .sec3 {
+    width: 100%;
+    border: 2px solid green;
+  }
+  
+  .image-with-text {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .image-text {
+    position: absolute;
+    height: 30vh;
+    bottom: 10%; /* Adjust this as needed */
+    left: 5%; /* Adjust this as needed */
+    width: 90%; /* Adjust this as needed */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px; /* Adjust this as needed */
+    box-sizing: border-box;
+  }
+  
+  .image-text:hover {
+    background-color: #333; /* Change this to your desired hover color */
+  }
+
+  .l1{
+    height: 150vh;
+    border: 2px solid blue;
+  }
+  
+  .a1{
+    height: 150vh;
+    border: 2px solid green;
+  }
+  
+
+  .middle-section{
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    border: 2px solid red;
+  }
+
+  .middle-sec1,.middle-sec2,.middle-sec3{
+    width: 100%;
+  }
+
+  .middle-sec1,.middle-sec2{
+    border: 2px solid green;
+    padding: 1rem;
+  }
+
+  .e1{
+    font-size: 28px;
+    font-weight: 500;
+    transition: color 0.3s ease,filter 0.3s ease-in-out;
+
+
+  }
+  .e1:hover{
+    cursor: pointer;
+    color: #aaabae;
+    filter: blur(0.3.px);
+  }
+
+  .e2{
+    font-size: 18px;
+    margin-top: 20%;
+    color: #4f4d4d;
+    transition: color 0.3s ease,filter 0.3s ease-in-out;
+  }
+
+  .e2:hover{
+    cursor: pointer;
+    color: #007bff;
+  }
+
+  .e3{
+    font-size: 18px;
+    margin-top: 5%;
+    color: #878787;
+    font-family: "";
+  }
+
+  .e4{
+    font-size: 18px;
+    margin-top: 25%;
+    color: #4f4d4d;
+    transition:  color 0.3s ease,filter 0.3s ease-in-out;
+  }
+
+  .e4:hover{
+    cursor: pointer;
+    color: #007bff;
+  }
+
+  .e5{
+    font-size: 18px;
+    margin-top: 5%;
+    color: #878787;
+
+  }
+
+  .middle-sec3{
+    width: 100%;
+    border: 2px solid brown;
+  
+  }
+
+  .image-with-text1{
+    position: relative;
+    width: 100%;
+  }
+
+  .image1{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .image-text1{
+    position: absolute;
+    height: 30vh;
+    bottom: 35%;
+    left: 5%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: filter 0.3s ease-in-out;
+
+
+  }
+
+  .image-text1:hover{
+    background-color: #333;
+    
+  }
+
+  
+  /* .last-section{
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border: 2px solid pink;
+  }
+
+  .gird-box1,.gird-box2,.gird-box3{
+    height: 30vh;
+    border: 2px solid black;
+
+  } */
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .grid-item .img2-1 {
+    width: 100%;
+    height: auto;
+  }
+  
+  .grid-item .gbox {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  /* .grid-item .gp1,.gp2,.gp3 {
+    text-align: center;
+  } */
+  
+  .grid-cont1,.grid-cont2,.grid-cont3{
+    float: left;
+    font-size: 24px;
+    color: black;
+    transition: color 0.3s ease,filter 0.3s ease-in-out;
+
+  }
+  
+  .grid-cont1:hover{
+    cursor: pointer;
+    color: #aaabae;
+    filter: blur(0.3.px);
+  }
+  .grid-cont2:hover{
+    cursor: pointer;
+    color: #aaabae;
+    filter: blur(0.3.px);
+  }
+
+  .grid-cont3:hover{
+    cursor: pointer;
+    color: #aaabae;
+    filter: blur(0.3.px);
+  }
+
+  .gp1,.gp2,.gp3{
+    margin-top: 15%;
+    font: 14px;
+    line-height: 1.5rem;
+    color: #878787;
+    text-align: left;
+  }
+
+  .dev{
+   top: 5%;
+  }
+
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #878787;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999; /* Ensure the button stays on top of other content */
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #0056b3;
+  }
+  @keyframes rotateNames {
+    0% {
+      opacity: 0;
+      transform: translateY(11px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  .hello-u {
+    font-size: 24px;
+    display: inline-block; /* Ensure the animation works properly */
+    animation: rotateNames 6s infinite; /* Adjust the duration as needed */
+  }
+  
+  .hello-u:nth-child(2) {
+    animation-delay: 3s; /* Delay the animation for the second span */
+  }
+  
+
+  /* ///////////////////////////////////////////// */
+
+  .l1 {
+    position: relative; /* Ensure relative positioning for the container */
+    height: 150vh;
+    border: 2px solid blue;
+    overflow: hidden; /* Hide overflow content */
+  }
+  
+  .laptop-with-text {
+    position: absolute; /* Position the laptop-with-text relative to its container */
+    top: 50%; /* Place it at the center vertically */
+    left: 50%; /* Place it at the center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center the image */
+    text-align: center;
+  }
+  
+  .laptopimg {
+    max-width: 100%; /* Ensure image does not exceed container width */
+  }
+  
+  .laptopp-text {
+    position: absolute; /* Position text relative to its container */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px; /* Adjust padding as needed */
+    box-sizing: border-box;
+    font-size: 1.2em;
+  }
+  
+
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    .center-section {
+      flex-direction: row;
+    }
+  
+    .sec1,
+    .sec2,
+    .sec3 {
+      width: 30%;
+    }
+  
+    .image-text {
+      bottom: 35%;
+      left: 16%;
+      width: 20vw;
+      padding: 40px;
+    }
+   
+   
+  }
+  @media (max-width: 767px) {
+    .middle-section {
+      flex-direction: column;
+    }
+  
+    .middle-sec1,
+    .middle-sec2,
+    .middle-sec3 {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid green;
+    }
+  
+    .image-text1 {
+      bottom: 15%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .grid-container {
+      grid-template-columns: repeat(1, 1fr); /* Change to a single column layout */
+      grid-gap: 1.5rem; /* Increase gap between grid items for better spacing on smaller screens */
+      padding: 1rem; /* Adjust padding */
+    }
+  }

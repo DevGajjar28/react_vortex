@@ -1,0 +1,92 @@
+/* SearchBar.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+  }
+  
+  .error-msg {
+    color: red;
+    text-align: center; /* Center the error message */
+  }
+  
+  .search-section {
+    text-align: center; /* Center the search input */
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for better responsiveness */
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 10%;
+    box-sizing: 24%;
+    margin-bottom: 1px; /* Add margin to separate from filters */
+  }
+  
+  .filters {
+    display: flex;
+    margin-top: 10%;
+    flex-wrap: wrap; /* Allow filters to wrap on smaller screens */
+    justify-content: center; /* Center the filters horizontally */
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filters div {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 20px;
+  }
+  
+  .buttons button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .loading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #007bff;
+    text-align: center; /* Center the loading message */
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media only screen and (max-width: 600px) {
+    .filters {
+      flex-direction: column; /* Stack filters vertically on smaller screens */
+      align-items: center; /* Center filters vertically */
+    }
+  }
+  

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-import regbg from '../assets/regbg2.jpg'
+// import regbg from '../assets/regbg2.jpg'
+import axios from 'axios';
 
 function Register() {
   const initialvalues = { username: "", email: "", password: "" };
@@ -9,15 +10,22 @@ function Register() {
   const [isSubmit, setIsSubmit] = useState(false);
   const [hasErrors, setHasErrors] = useState(false);
 
+   
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormvalues({ ...formvalues, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormErrors(validate(formvalues));
-    setIsSubmit(true);
+    try {
+      const response = await axios.post('/api/register/', formvalues);
+      console.log(response.data); // Success message from backend
+      setIsSubmit(true); // Update submit status
+    } catch (error) {
+      console.error('Error registering user:', error.response.data);
+      setFormErrors(error.response.data); // Set errors returned from backend
+    }
   };
 
   useEffect(() => {
@@ -43,68 +51,63 @@ function Register() {
       errors.password = "Password cannot be more than 10 characters";
     }
     return errors;
-  }
+  };
 
   return (
     <>
-    
-   
       <div className="welcome-details">
         Welcome
         <p className="details">Please enter your details</p>
       </div>
       <div className="register-background">
-      {/* <img src={regbg} alt="bg" /> */}
-      <div className={`reg-form-container ${hasErrors ? 'has-errors' : ''}`}>
-        {hasErrors ? (
-          <div className="message">Signed in successfully</div>
-        ) : (
-          <p></p>
-        )}
-
-        <form onSubmit={handleSubmit} className={hasErrors ? 'has-errors' : ''}>
-          <h2 className="rr">Register</h2>
-          <div className="field">
-            <label>Username</label>
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              value={formvalues.username}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.username}</p>
-          <div className="field">
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formvalues.email}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.email}</p>
-          <div className="field">
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formvalues.password}
-              onChange={handleChange}
-            />
-            <p>{formErrors.password}</p>
-          </div>
-          <button className="submit">Submit</button>
-          <div className="term">By joining, you agree to the Terms and Privacy Policy.</div>
-        </form>
-      </div>
-
-      <div className="login-account">
-        Already have an account? <Link to="/Login" className='login-link'>Login</Link>
-      </div>
+        <div className={`reg-form-container ${hasErrors ? 'has-errors' : ''}`}>
+          {hasErrors ? (
+            <div className="message">Signed in successfully</div>
+          ) : (
+            <p></p>
+          )}
+          <form onSubmit={handleSubmit} className={hasErrors ? 'has-errors' : ''}>
+            <h2 className="rr">Register</h2>
+            <div className="field">
+              <label>Username</label>
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                value={formvalues.username}
+                onChange={handleChange}
+              />
+            </div>
+            <p>{formErrors.username}</p>
+            <div className="field">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formvalues.email}
+                onChange={handleChange}
+              />
+            </div>
+            <p>{formErrors.email}</p>
+            <div className="field">
+              <label>Password</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formvalues.password}
+                onChange={handleChange}
+              />
+              <p>{formErrors.password}</p>
+            </div>
+            <button className="submit">Submit</button>
+            <div className="term">By joining, you agree to the Terms and Privacy Policy.</div>
+          </form>
+        </div>
+        <div className="login-account">
+          Already have an account? <Link to="/Login" className='login-link'>Login</Link>
+        </div>
       </div>
     </>
   );

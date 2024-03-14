@@ -210,7 +210,7 @@ textarea{
   text-align: center;
 }
  img{
-  display: none;
+  /* display: none; */
  }
  .text-overlay{
   margin-top: -50%;

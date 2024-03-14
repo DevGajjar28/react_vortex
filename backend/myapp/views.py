@@ -1,46 +1,26 @@
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login as auth_login
+from django.views.decorators.http import require_POST
+from django.contrib.auth.models import User
+from django.http import JsonResponse
 
-# from .models import Student
-# from .serializers import StudentSerializer
-from rest_framework.generics import ListAPIView
-from django.shortcuts import render,redirect
-from django.contrib.auth import authenticate, login as auth_login
-from .forms import signupform
-from django.contrib import messages
-# Create your views here.
-
-# class StudentList(ListAPIView):
-#     queryset = Student.objects.all()
-#     serializer_class = StudentSerializer
-def signupview(request):
-    if request.method == 'POST':
-        form = signupform(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'User registered successfully!')
-            return redirect('login')
-        else:
-            messages.error(request, 'Form is not valid. Please check the data.')
+@require_POST
+# @csrf_exempt
+def register(request):
+    form = UserCreationForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return JsonResponse({'message': 'User registered successfully'})
     else:
-        form = signupform()
+        errors = form.errors.as_json()
+        return JsonResponse({'error': errors}, status=400)
 
-    return render(request, 'signup.html', {'form': form})
-            
-    # return render(request,'signup.html')
-
-def custom_login(request):
-    if request.method == "POST":
-        username = request.POST['username']
-        password = request.POST['password']
-
-        user = authenticate(request, username=username, password=password)
-
-        if user is not None:
-            auth_login(request, user)  # Use auth_login instead of login
-            return redirect('next')  # Ensure 'next' matches the name in your urls.py
-        else:
-            return render(request, 'login.html', {'error': 'Invalid credentials'})
-
-    return render(request, 'login.html')
-
-def Next(request):
-    return render(request,'next.html')
+@require_POST
+def login_user(request):
+    form = AuthenticationForm(request, request.POST)
+    if form.is_valid():
+        user = form.get_user()
+        auth_login(request, user)
+        return JsonResponse({'message': 'Login successful'})
+    else:
+        return JsonResponse({'error': 'Invalid username or password'}, status=400)

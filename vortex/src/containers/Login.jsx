@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import loginbg from '../assets/login-bg.jpg';
+import axios from 'axios';
 
 
 function Login() {
@@ -10,6 +11,18 @@ function Login() {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
+
+
+// const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     try {
+//         const response = await axios.post('/api/login/', formvalues);
+//         console.log(response.data); // Success message from backend
+//     } catch (error) {
+//         console.error('Error logging in:', error.response.data);
+//     }
+// };
+
   const handleChange = (e) => {
         
         const {name , value} = e.target;
@@ -17,8 +30,14 @@ function Login() {
         console.log(formvalues);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const response = await axios.post('/api/login/', formvalues);
+      console.log(response.data); // Success message from backend
+  } catch (error) {
+      console.error('Error logging in:', error.response.data);
+  }
     setFormErrors(validate(formvalues));
     setIsSubmit(true);
   };

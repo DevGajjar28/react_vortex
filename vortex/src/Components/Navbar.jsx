@@ -44,7 +44,7 @@ function Navbar() {
                 <div className="sub-section">
                   <div className="sub-header">Company</div>
                   <Link to="/about">About us</Link>
-                  <Link to="/history">History</Link>
+                  <Link to="/History">History</Link>
                   <Link to="/Contactus">Contact us</Link>
                 </div>
                 <div className="sub-section">
